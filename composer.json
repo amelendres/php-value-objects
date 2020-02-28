@@ -1,0 +1,29 @@
+{
+    "name": "appto/php-value-objects",
+    "description": "PHP value objects",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Appto\\": "src/Appto/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\": "tests/"
+        }
+    },
+    "require": {
+        "ramsey/uuid": "^3.9",
+        "symfony/intl": "^5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "phpstan/phpstan": "^0.12.11"
+    },
+    "authors": [
+        {
+            "name": "Al Fred Do",
+            "email": "alfredo.melendres@gmail.com"
+        }
+    ]
+}
