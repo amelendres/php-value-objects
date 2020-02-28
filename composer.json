@@ -9,16 +9,18 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Test\\": "tests/"
+            "Test\\Unit\\": "tests/Unit/"
         }
     },
     "require": {
+        "php": "^7.2.5",
         "ramsey/uuid": "^3.9",
         "symfony/intl": "^5.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.0",
-        "phpstan/phpstan": "^0.12.11"
+        "phpstan/phpstan": "^0.12.11",
+        "fzaninotto/faker": "^1.9"
     },
     "authors": [
         {

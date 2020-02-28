@@ -1,0 +1,38 @@
+<?php
+
+namespace Test\Unit\Appto\Common\Domain\DateTime;
+
+
+use Appto\Common\Domain\DateTime\InvalidTimePeriodException;
+use Appto\Common\Domain\DateTime\TimePeriod;
+use Test\Unit\Appto\UnitTest;
+
+class TimePeriodTest extends UnitTest
+{
+    public function testCreated()
+    {
+        $timePeriod = new TimePeriod(
+            $this->faker->dateTimeAd('now'),
+            new \DateTime()
+        );
+        self::assertNotNull($timePeriod);
+    }
+
+    public function testCreatedFailWithInvalidEndDate()
+    {
+        $this->expectException(InvalidTimePeriodException::class);
+        $timePeriod = new TimePeriod(
+            new \DateTime(),
+            $this->faker->dateTimeAd('now')
+        );
+    }
+
+    public function testCountDays()
+    {
+        $timePeriod = new TimePeriod(
+            new \DateTime("2018/01/01"),
+            new \DateTime("2018/01/10")
+        );
+        self::assertEquals(10, $timePeriod->days());
+    }
+}
