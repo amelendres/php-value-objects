@@ -35,4 +35,31 @@ class TimePeriodTest extends UnitTest
         );
         self::assertEquals(10, $timePeriod->days());
     }
+
+    public function testHasDateAsStartDate()
+    {
+        $timePeriod = new TimePeriod(
+            new \DateTime("2018/01/01"),
+            new \DateTime("2018/01/10")
+        );
+        self::assertTrue( $timePeriod->has(new \DateTime("2018/01/01")));
+    }
+
+    public function testHasDateAsEndDate()
+    {
+        $timePeriod = new TimePeriod(
+            new \DateTime("2018/01/01"),
+            new \DateTime("2018/01/10")
+        );
+        self::assertTrue( $timePeriod->has(new \DateTime("2018/01/10")));
+    }
+
+    public function testDoesNotHasDate()
+    {
+        $timePeriod = new TimePeriod(
+            new \DateTime("2018/01/01"),
+            new \DateTime("2018/01/10")
+        );
+        self::assertFalse( $timePeriod->has(new \DateTime("2018/01/11")));
+    }
 }
