@@ -28,7 +28,7 @@ class CountryCodeTest extends UnitTest
 
         $this->assertNotNull($countryCode);
     }
-    
+
     public function validCountryCodesProvider()
     {
         return [['ES', 'US', 'IT', 'CN']];
