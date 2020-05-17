@@ -17,5 +17,10 @@ abstract class IntegerValueObject
         return $this->value;
     }
 
+    public function equals(self $other) : bool
+    {
+        return $this->value == $other->value;
+    }
+
     protected abstract function guard(int $value): void;
 }

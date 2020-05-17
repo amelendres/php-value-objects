@@ -19,8 +19,16 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^9.0",
-        "phpstan/phpstan": "^0.12.11",
+        "phpstan/phpstan": "^0.12.25",
         "fzaninotto/faker": "^1.9"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "./etc/hooks/install-hooks.sh"
+        ],
+        "phpunit": "vendor/bin/phpunit --exclude-group='disabled'",
+        "phpstan": "vendor/bin/phpstan analyse -l 5 -c etc/phpstan/phpstan.neon src --quiet",
+        "test": ["@phpstan", "@phpunit"]
     },
     "authors": [
         {

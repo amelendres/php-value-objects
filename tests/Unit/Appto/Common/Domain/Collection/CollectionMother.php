@@ -2,7 +2,6 @@
 
 namespace Tests\Unit\Appto\Common\Domain\Collection;
 
-
 use Test\Unit\Appto\Mother;
 
 class CollectionMother extends Mother

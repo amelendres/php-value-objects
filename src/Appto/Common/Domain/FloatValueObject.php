@@ -17,5 +17,10 @@ abstract class FloatValueObject
         return $this->value;
     }
 
+    public function equals(self $other) : bool
+    {
+        return $this->value == $other->value;
+    }
+
     protected abstract function guard(float $value): void;
 }

@@ -13,9 +13,11 @@ class Price extends Money
         $this->currency = $currency;
     }
 
-    public function guardAmount(float $amount): void
+    public function guardAmount(float $amount) : void
     {
-        //TODO validate >= 0
+        if ($this->amount() < 0) {
+            throw new InvalidPriceAmountException($amount);
+        }
     }
 
 }
