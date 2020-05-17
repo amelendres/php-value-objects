@@ -2,7 +2,6 @@
 
 namespace Tests\Unit\Appto\Common\Domain\Identity;
 
-
 use Test\Unit\Appto\Mother;
 
 class UuidMother extends Mother
