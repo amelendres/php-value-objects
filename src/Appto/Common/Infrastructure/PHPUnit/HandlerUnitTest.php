@@ -1,8 +1,6 @@
 <?php
 
-namespace Tests\Unit\Appto;
-
-use Test\Unit\Appto\UnitTest;
+namespace Appto\Common\Infrastructure\PHPUnit;
 
 abstract class HandlerUnitTest extends UnitTest
 {

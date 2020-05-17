@@ -1,9 +1,8 @@
 <?php
 
-namespace Tests\Unit\Appto\Common\Domain;
+namespace Appto\Common\Infrastructure\PHPUnit\Mother;
 
-
-use Test\Unit\Appto\Mother;
+use Appto\Common\Infrastructure\PHPUnit\Mother;
 
 class SimpleValueObjectMother extends Mother
 {
