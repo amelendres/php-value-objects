@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Unit\Appto;
+namespace Appto\Common\Infrastructure\PHPUnit;
 
 use Faker\Factory;
 use Faker\Generator;

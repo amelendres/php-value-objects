@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Unit\Appto\Common\Domain\Identity;
+namespace Appto\Common\Infrastructure\PHPUnit\Mother;
 
-use Test\Unit\Appto\Mother;
+use Appto\Common\Infrastructure\PHPUnit\Mother;
 
 class UuidMother extends Mother
 {

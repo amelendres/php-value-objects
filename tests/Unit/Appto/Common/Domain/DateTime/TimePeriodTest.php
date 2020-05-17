@@ -4,7 +4,7 @@ namespace Test\Unit\Appto\Common\Domain\DateTime;
 
 use Appto\Common\Domain\DateTime\InvalidTimePeriodException;
 use Appto\Common\Domain\DateTime\TimePeriod;
-use Test\Unit\Appto\UnitTest;
+use Appto\Common\Infrastructure\PHPUnit\UnitTest;
 
 class TimePeriodTest extends UnitTest
 {

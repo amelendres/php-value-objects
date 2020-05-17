@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Unit\Appto\Common\Domain\Collection;
+namespace Appto\Common\Infrastructure\PHPUnit\Mother;
 
-use Test\Unit\Appto\Mother;
+use Appto\Common\Infrastructure\PHPUnit\Mother;
 
 class CollectionMother extends Mother
 {

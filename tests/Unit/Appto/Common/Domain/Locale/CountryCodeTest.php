@@ -4,7 +4,7 @@ namespace Test\Unit\Appto\Common\Domain\Locale;
 
 use Appto\Common\Domain\Locale\CountryCode;
 use Appto\Common\Domain\Locale\InvalidCountryCodeException;
-use Test\Unit\Appto\UnitTest;
+use Appto\Common\Infrastructure\PHPUnit\UnitTest;
 
 class CountryCodeTest extends UnitTest
 {

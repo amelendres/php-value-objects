@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Unit\Appto;
+namespace Appto\Common\Infrastructure\PHPUnit;
 
 use PHPUnit\Framework\MockObject\MockBuilder;
 use PHPUnit\Framework\MockObject\MockObject;
