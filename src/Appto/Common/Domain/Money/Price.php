@@ -2,22 +2,32 @@
 
 namespace Appto\Common\Domain\Money;
 
-class Price extends Money
+class Price
 {
-    public const DEFAULT_CURRENCY = 'EUR';
+    private $amount;
+    private $vat;
 
-    public function __construct(float $amount, Currency $currency)
+    public function __construct(Money $amount, VAT $vat)
     {
         $this->guardAmount($amount);
         $this->amount = $amount;
-        $this->currency = $currency;
+        $this->vat = $vat;
     }
 
-    public function guardAmount(float $amount) : void
+    public function guardAmount(Money $amount) : void
     {
-        if ($this->amount() < 0) {
-            throw new InvalidPriceAmountException($amount);
+        if ($this->amount()->amount() < 0) {
+            throw new InvalidPriceAmountException($amount->amount());
         }
     }
 
+    public function amount() : Money
+    {
+        return $this->amount;
+    }
+
+    public function vat() : VAT
+    {
+        return $this->vat;
+    }
 }

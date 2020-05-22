@@ -4,6 +4,8 @@ namespace Appto\Common\Domain\Money;
 
 class Money
 {
+    public const DEFAULT_CURRENCY = 'EUR';
+
     protected $amount;
     protected $currency;
 
@@ -11,6 +13,21 @@ class Money
     {
         $this->amount = $amount;
         $this->currency = $currency;
+    }
+
+    public function multiply(float $factor): Money
+    {
+        return new self($this->amount * $factor, $this->currency());
+    }
+
+    public function add(Money $other): Money
+    {
+        return new self($this->amount + $other->amount(), $this->currency());
+    }
+
+    public function minus(Money $other): Money
+    {
+        return new self($this->amount - $other->amount(), $this->currency());
     }
 
     public function equals(Money $other) : bool
