@@ -13,4 +13,8 @@ class NaturalNumber extends IntegerValueObject
         }
     }
 
+    public function add(NaturalNumber $other): NaturalNumber
+    {
+        return new self($this->value + $other->value());
+    }
 }
