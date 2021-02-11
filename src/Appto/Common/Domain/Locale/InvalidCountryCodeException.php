@@ -1,7 +1,8 @@
 <?php
 
-namespace Appto\Common\Domain\Locale;
+declare(strict_types=1);
 
+namespace Appto\Common\Domain\Locale;
 
 class InvalidCountryCodeException extends \DomainException
 {

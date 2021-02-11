@@ -1,7 +1,8 @@
 <?php
 
-namespace Appto\Common\Domain\Money;
+declare(strict_types=1);
 
+namespace Appto\Common\Domain\Money;
 
 class InvalidCurrencyException extends \DomainException
 {

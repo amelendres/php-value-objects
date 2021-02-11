@@ -1,7 +1,8 @@
 <?php
 
-namespace Appto\Common\Domain\DateTime;
+declare(strict_types=1);
 
+namespace Appto\Common\Domain\DateTime;
 
 class InvalidTimePeriodException extends \DomainException
 {
