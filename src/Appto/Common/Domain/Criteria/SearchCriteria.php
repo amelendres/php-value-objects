@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Appto\Common\View;
+namespace Appto\Common\Domain\Criteria;
 
 class SearchCriteria
 {
