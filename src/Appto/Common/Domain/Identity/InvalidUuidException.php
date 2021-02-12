@@ -1,7 +1,8 @@
 <?php
 
-namespace Appto\Common\Domain\Identity;
+declare(strict_types=1);
 
+namespace Appto\Common\Domain\Identity;
 
 class InvalidUuidException extends \DomainException
 {

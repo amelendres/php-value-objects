@@ -1,6 +1,8 @@
 <?php
 
-namespace Appto\Common\View;
+declare(strict_types=1);
+
+namespace Appto\Common\Domain\Criteria;
 
 class Filter
 {

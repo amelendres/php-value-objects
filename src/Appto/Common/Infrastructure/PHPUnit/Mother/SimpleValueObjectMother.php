@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Appto\Common\Infrastructure\PHPUnit\Mother;
 
 use Appto\Common\Infrastructure\PHPUnit\Mother;
