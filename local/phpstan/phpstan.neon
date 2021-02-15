@@ -1,7 +1,10 @@
 parameters:
-    bootstrap: %currentWorkingDirectory%/vendor/autoload.php
+    bootstrapFiles:
+        - %currentWorkingDirectory%/vendor/autoload.php
     reportUnmatchedIgnoredErrors: false
     inferPrivatePropertyTypeFromConstructor: true
+    checkFunctionNameCase: true
+    checkInternalClassCaseSensitivity: true
     ignoreErrors:
         - '#Ternary operator condition is always true.#'
         - '#Static call to instance method ClassName.*#'
@@ -12,3 +15,5 @@ parameters:
         - '#.*was not matched in reported errors.#'
     excludes_analyse:
         - src/Migrations
+        - tests/_data/*
+

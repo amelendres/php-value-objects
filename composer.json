@@ -9,26 +9,29 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Test\\Unit\\": "tests/Unit/"
+            "Test\\": "tests/"
         }
     },
     "require": {
-        "php": "^7.2.5",
+        "php": "^7.4",
         "ramsey/uuid": "^3.9",
         "symfony/intl": "^4.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.0",
         "phpstan/phpstan": "^0.12.25",
-        "fzaninotto/faker": "^1.9"
+        "fzaninotto/faker": "^1.9",
+        "squizlabs/php_codesniffer": "^3.5"
     },
     "scripts": {
         "post-install-cmd": [
-            "./etc/hooks/install-hooks.sh"
+            "./local/hooks/install-hooks.sh"
         ],
         "phpunit": "vendor/bin/phpunit --exclude-group='disabled'",
-        "phpstan": "vendor/bin/phpstan analyse -l 5 -c etc/phpstan/phpstan.neon src --quiet",
-        "test": ["@phpstan", "@phpunit"]
+        "phpstan": "phpstan analyse -l 5 -c local/phpstan/phpstan.neon src --quiet",
+        "phpcs": "phpcs",
+        "phpcbf": "phpcbf",
+        "test": ["@phpunit", "@phpstan", "@phpcs"]
     },
     "authors": [
         {

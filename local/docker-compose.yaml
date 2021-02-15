@@ -1,0 +1,16 @@
+version: '3.6'
+
+services:
+    php:
+        container_name: appto-common
+        image: php-fpm-appto-common
+        build:
+            context: ../
+            dockerfile: local/Dockerfile
+        restart: unless-stopped
+        expose:
+            - '9000'
+#        ports:
+#            - "9040:9001"
+        volumes:
+            - ../:/app:delegated
