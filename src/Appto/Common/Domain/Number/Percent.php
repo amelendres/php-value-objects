@@ -6,11 +6,10 @@ use Appto\Common\Domain\FloatValueObject;
 
 class Percent extends FloatValueObject
 {
-    protected function guard(float $value) : void
+    protected function guard(float $value): void
     {
-        if($value < 0 || $value > 100){
+        if ($value < 0 || $value > 100) {
             throw new InvalidPercentException($value);
         }
     }
-
 }

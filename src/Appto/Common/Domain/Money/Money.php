@@ -32,18 +32,18 @@ class Money
         return new self($this->amount - $other->amount(), $this->currency());
     }
 
-    public function equals(Money $other) : bool
+    public function equals(Money $other): bool
     {
         return $this->currency->equals($other->currency())
             && $this->amount == $other->amount;
     }
 
-    public function amount() : float
+    public function amount(): float
     {
         return $this->amount;
     }
 
-    public function currency() : Currency
+    public function currency(): Currency
     {
         return $this->currency;
     }

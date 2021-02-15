@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Appto\Common\Domain\Number;
-
 
 class InvalidPercentException extends \DomainException
 {

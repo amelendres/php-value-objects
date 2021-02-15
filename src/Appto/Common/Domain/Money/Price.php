@@ -16,19 +16,19 @@ class Price
         $this->vat = $vat;
     }
 
-    public function guardAmount(Money $amount) : void
+    public function guardAmount(Money $amount): void
     {
         if ($this->amount()->amount() < 0) {
             throw new InvalidPriceAmountException($amount->amount());
         }
     }
 
-    public function amount() : Money
+    public function amount(): Money
     {
         return $this->amount;
     }
 
-    public function vat() : VAT
+    public function vat(): VAT
     {
         return $this->vat;
     }

@@ -15,7 +15,7 @@ abstract class UnitTest extends TestCase
 
     protected function setUp(): void
     {
-        if(isset($this->faker)){
+        if (isset($this->faker)) {
             return;
         }
         $this->faker = Factory::create();

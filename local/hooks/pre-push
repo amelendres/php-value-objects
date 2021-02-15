@@ -31,7 +31,8 @@ then
 fi
 
 echo -e "* Checking pre push conditions ('test' composer task)…${YELLOW}"
-composer test > /dev/null
+#docker exec -it reading-progress-php composer test > /dev/null
+docker exec -i appto-common composer test
 canPush=$?
 
 if [ $canPush -ne 0 ]
@@ -55,7 +56,7 @@ then
                 @@@@@@@@@@@@@@@
                     @@@@@@@
 
-              Be a good Padawan !!!
+              Be a good developer !!!
                   FIX YOUR CODE
         "
 fi
@@ -94,7 +95,7 @@ then
 
                            ⭐️⭐️⭐️⭐️⭐️
                             BRAVO!!!
-                      YOU ARE A GOOD PADAWAN
+                    YOU ARE A GOOD DEVELOPER
     "
     echo -e "${NA}"
     exit 0
