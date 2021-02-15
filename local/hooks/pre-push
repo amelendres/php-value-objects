@@ -32,7 +32,7 @@ fi
 
 echo -e "* Checking pre push conditions ('test' composer task)…${YELLOW}"
 #docker exec -it reading-progress-php composer test > /dev/null
-docker exec -i reading-progress-php composer test
+docker exec -i appto-common-php composer test
 canPush=$?
 
 if [ $canPush -ne 0 ]
