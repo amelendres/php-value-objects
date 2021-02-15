@@ -10,7 +10,7 @@ use Symfony\Component\Intl\Countries;
 class CountryCode extends StringValueObject
 {
 
-    protected function guard(string $value) : void
+    protected function guard(string $value): void
     {
         if (!Countries::exists($value)) {
             throw new InvalidCountryCodeException($value);

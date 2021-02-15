@@ -18,7 +18,7 @@ class TimePeriod
 
     private function guard(\DateTimeInterface $startDate, \DateTimeInterface $endDate): void
     {
-        if($startDate > $endDate){
+        if ($startDate > $endDate) {
             throw new InvalidTimePeriodException($startDate, $endDate);
         }
     }
@@ -30,15 +30,15 @@ class TimePeriod
 
     public function days(): int
     {
-        return $this->endDate()->diff($this->startDate())->days+1;
+        return $this->endDate()->diff($this->startDate())->days + 1;
     }
 
-    public function startDate() : \DateTimeInterface
+    public function startDate(): \DateTimeInterface
     {
         return $this->startDate;
     }
 
-    public function endDate() : \DateTimeInterface
+    public function endDate(): \DateTimeInterface
     {
         return $this->endDate;
     }

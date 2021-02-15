@@ -10,7 +10,7 @@ use Symfony\Component\Intl\Currencies;
 class Currency extends StringValueObject
 {
 
-    protected function guard(string $value) : void
+    protected function guard(string $value): void
     {
         if (!Currencies::exists($value)) {
             throw new InvalidCurrencyException($value);

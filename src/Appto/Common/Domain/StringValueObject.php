@@ -14,19 +14,19 @@ abstract class StringValueObject
         $this->value = $value;
     }
 
-    protected abstract function guard(string $value): void;
+    abstract protected function guard(string $value): void;
 
-    public function value() : string
+    public function value(): string
     {
         return $this->value;
     }
 
-    public function __toString() : string
+    public function __toString(): string
     {
         return $this->value;
     }
 
-    public function equals(self $other) : bool
+    public function equals(self $other): bool
     {
         return $this->value == $other->value;
     }

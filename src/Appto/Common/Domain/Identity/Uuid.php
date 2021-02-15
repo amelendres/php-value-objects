@@ -10,7 +10,7 @@ class Uuid extends StringValueObject
 {
     protected $value;
 
-    protected function guard(string $value) : void
+    protected function guard(string $value): void
     {
         if (!\Ramsey\Uuid\Uuid::isValid($value)) {
             throw new InvalidUuidException($value);

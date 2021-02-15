@@ -16,7 +16,7 @@ abstract class Mock
         $this->resource = $mockBuilder->getMock();
     }
 
-    public function mock() : MockObject
+    public function mock(): MockObject
     {
         return $this->resource;
     }

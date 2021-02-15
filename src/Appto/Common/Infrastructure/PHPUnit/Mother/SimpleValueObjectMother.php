@@ -8,7 +8,7 @@ use Appto\Common\Infrastructure\PHPUnit\Mother;
 
 class SimpleValueObjectMother extends Mother
 {
-    public static function random(Callable $objectMother)
+    public static function random(callable $objectMother)
     {
         return call_user_func($objectMother);
     }
