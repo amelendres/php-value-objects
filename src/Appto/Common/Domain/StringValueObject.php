@@ -21,7 +21,15 @@ abstract class StringValueObject
         return $this->value;
     }
 
+    /**
+     * @deprecated use toString
+     */
     public function __toString(): string
+    {
+        return $this->value;
+    }
+
+    public function toString(): string
     {
         return $this->value;
     }
