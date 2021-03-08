@@ -9,10 +9,12 @@ use Appto\Common\Domain\StringValueObject;
 
 class Url extends StringValueObject implements Nullable
 {
-    protected function guard(string $value): void
+    protected function guard(string $url): void
     {
-        if (preg_match('#^https?://#i', $value) != 1) {
-            throw new InvalidUrlException($value);
+        $url = filter_var($url, FILTER_SANITIZE_URL);
+
+        if (substr($url, 0, 4) != 'http' || filter_var($url, FILTER_SANITIZE_STRING) != $url) {
+            throw new InvalidUrlException($url);
         }
     }
 
