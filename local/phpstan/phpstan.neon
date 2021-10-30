@@ -1,10 +1,7 @@
 parameters:
-    bootstrapFiles:
-        - %currentWorkingDirectory%/vendor/autoload.php
     reportUnmatchedIgnoredErrors: false
     inferPrivatePropertyTypeFromConstructor: true
     checkFunctionNameCase: true
-    checkInternalClassCaseSensitivity: true
     ignoreErrors:
         - '#Ternary operator condition is always true.#'
         - '#Static call to instance method ClassName.*#'

@@ -10,11 +10,11 @@
     <server name="APP_ENV" value="test" force="true" />
     <server name="SHELL_VERBOSITY" value="-1" />
   </php>
-  <coverage processUncoveredFiles="true">
+<!--  <coverage processUncoveredFiles="true">
     <include>
       <directory suffix=".php">src</directory>
     </include>
-  </coverage>
+  </coverage>-->
   <testsuites>
     <testsuite name="default">
       <directory suffix="Test.php">tests</directory>
