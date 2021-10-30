@@ -5,15 +5,19 @@ declare(strict_types=1);
 namespace Appto\Common\Domain\Money;
 
 use Appto\Common\Domain\StringValueObject;
-use Symfony\Component\Intl\Currencies;
 
 class Currency extends StringValueObject
 {
 
-    protected function guard(string $value): void
+    protected function guard(string $code): void
     {
-        if (!Currencies::exists($value)) {
-            throw new InvalidCurrencyException($value);
+        if (!$this->isValid($code)) {
+            throw new InvalidCurrencyException($code);
         }
+    }
+
+    private function isValid(string $currency): bool
+    {
+        return $currency === "EUR";
     }
 }

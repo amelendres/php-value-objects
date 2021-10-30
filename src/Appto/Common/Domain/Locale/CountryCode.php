@@ -5,15 +5,23 @@ declare(strict_types=1);
 namespace Appto\Common\Domain\Locale;
 
 use Appto\Common\Domain\StringValueObject;
-use Symfony\Component\Intl\Countries;
 
 class CountryCode extends StringValueObject
 {
-
-    protected function guard(string $value): void
+    protected function guard(string $code): void
     {
-        if (!Countries::exists($value)) {
-            throw new InvalidCountryCodeException($value);
+        if (!$this->isValid($code)) {
+            throw new InvalidCountryCodeException($code);
         }
+    }
+
+    private function isValid(string $code): bool
+    {
+        return in_array($code, $this->validCodes());
+    }
+
+    private function validCodes(): array
+    {
+        return ['ES', 'US', 'IT', 'CN'];
     }
 }
